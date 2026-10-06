@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f4ef">
+  <meta name="description" content="PHYSICS MAKER — физикалық формуланы қолмен ұстап, жұмыс істейтін модельге айналдыратын интерактивті оқу платформасы.">
+  <title>PHYSICS MAKER — Формуладан модельге дейін</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.0/dist/katex.min.css" integrity="sha384-3rdsX6e5mueWyoweR9NIVmtEsUkokpBT/0ALqKKIBMr9j4qhHkaIkAcGgsE6uVlp" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Physics Maker басты бет"><span class="brand-mark">P<span>·</span>M</span><span class="brand-name">PHYSICS<br>MAKER</span></a>
+    <nav aria-label="Негізгі мәзір"><a href="#models">Модельдер</a><a href="#lab">Виртуалды зертхана</a><a href="#method">Қалай жұмыс істейді?</a></nav>
+    <a class="top-cta" href="#models">Зерттеуді бастау <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> ИДЕЯДАН — ТӘЖІРИБЕГЕ</div>
+        <h1>Формуланы<br>қолға <em>ұста.</em></h1>
+        <p>Физика — тақтадағы таңба ғана емес. Ол қозғалады, өзгереді, жұмыс істейді. Формуланы модельге айналдырып, құбылысты өз көзіңмен зертте.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#models">Модельдерді көру <span>↓</span></a><a class="text-link" href="#lab"><span class="play">▶</span> Виртуалды тәжірибені көру</a></div>
+        <div class="hero-note"><span class="note-line"></span><span>ОҚУ · ҚҰРАСТЫРУ · ТҮСІНУ</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-grid"></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="formula-chip chip-a">F = ma</div><div class="formula-chip chip-b">E = mc²</div><div class="formula-chip chip-c">P = W / t</div>
+        <div class="hero-illustration" aria-label="Физикадағы қозғалыс пен энергияны бейнелейтін графика"><div class="sun"></div><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="ring ring-3"></div><div class="core">Φ</div><span class="particle p1"></span><span class="particle p2"></span><span class="particle p3"></span></div>
+        <div class="visual-caption"><span>01 / 10</span><span>ЗЕРТТЕУ АЛАҢЫ</span></div>
+        <div class="hero-sticker">ОЙЛА<br>ҚҰРАСТЫР<br>ТЕКСЕР<span>↘</span></div>
+      </div>
+      <div class="hero-bottom"><span>ФИЗИКА ӘРЕКЕТТЕ</span><span>SCROLL TO EXPLORE&nbsp; ↓</span><span>2026 — ОҚУ ЖОБАСЫ</span></div>
+    </section>
+
+    <section class="intro-strip" id="method"><div class="strip-number">01</div><p>Күрделі құбылысты <strong>қарапайым модельге</strong> айналдыр. Құрастыр, бақыла, формуламен түсіндір.</p><span class="strip-icon">✳</span></section>
+
+    <section class="models-section" id="models">
+      <div class="section-head"><div><div class="eyebrow">01 — МОДЕЛЬДЕР КІТАПХАНАСЫ</div><h2>Идеядан <em>құбылысқа.</em></h2></div><div class="section-aside">ӘР МОДЕЛЬ — БІР СҰРАҚ.<br>ӘР ТӘЖІРИБЕ — ЖАҢА ЖАУАП.</div></div>
+      <div class="filter-row"><div class="filters" role="group" aria-label="Модельдерді сүзу"><button class="filter active" data-filter="all">Барлығы <span>10</span></button><button class="filter" data-filter="energy">Энергия</button><button class="filter" data-filter="motion">Қозғалыс</button><button class="filter" data-filter="light">Жарық</button><button class="filter" data-filter="pressure">Қысым</button></div><label class="search-box"><span>⌕</span><input id="modelSearch" type="search" placeholder="Модельді іздеу" aria-label="Модельді іздеу"></label></div>
+      <div class="model-grid" id="modelGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>Сұранысқа сай модель табылмады. Басқа сөзбен іздеп көр.</div>
+    </section>
+
+    <section class="lab-section" id="lab">
+      <div class="lab-heading"><div><div class="eyebrow light-eyebrow"><span class="live-dot"></span> 02 — ВИРТУАЛДЫ ЗЕРТХАНА</div><h2>Формулаға<br><em>әсер ет.</em></h2></div><p>Параметрді өзгерт. Нәтижені бақыла. Физикалық заңның қалай жұмыс істейтінін тәжірибе жүзінде түсін.</p></div>
+      <div class="lab-tabs" role="tablist" aria-label="Зертхана тәжірибелері"><button class="lab-tab active" data-lab="wind" role="tab" aria-selected="true">01 / Жел энергиясы</button><button class="lab-tab" data-lab="hydraulic" role="tab" aria-selected="false">02 / Гидравлика</button><button class="lab-tab" data-lab="heat" role="tab" aria-selected="false">03 / Жылу</button></div>
+      <div class="lab-panel" id="labPanel"></div>
+      <div class="lab-foot"><span>МОДЕЛЬДЕУ — ЗАҢДЫ КӨРУДІҢ БІР ЖОЛЫ</span><span>ӨЗГЕРТУ ҮШІН СЫРҒЫТҚЫШТЫ ҚОЗҒА</span></div>
+    </section>
+
+    <section class="method-section"><div class="eyebrow">03 — БІР ФОРМУЛА. ҮШ ҚАДАМ.</div><h2>Білуден — <em>жасағанға.</em></h2><div class="steps"><article><span>01</span><div class="step-icon">⌁</div><h3>Сұрақ қой</h3><p>Қандай құбылысты түсінгің келеді? Модельді таңда.</p></article><article><span>02</span><div class="step-icon">◈</div><h3>Құрастыр</h3><p>Қолда бар материалдардан қарапайым құрылғы жаса.</p></article><article><span>03</span><div class="step-icon">↗</div><h3>Тексер</h3><p>Өлше, формуламен салыстыр және өз қорытындыңды шығар.</p></article></div></section>
+
+    <section class="closing"><span class="closing-mark">Φ</span><div class="eyebrow">PHYSICS MAKER / ОҚУ ПЛАТФОРМАСЫ</div><h2>Физиканы оқыма.<br><em>Физиканы жаса.</em></h2><a href="#models" class="button button-light">Алғашқы модельді таңда <span>↗</span></a></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">P<span>·</span>M</span><span class="brand-name">PHYSICS<br>MAKER</span></a><span>ФИЗИКАЛЫҚ ФОРМУЛАДАН ЖҰМЫС ІСТЕЙТІН МОДЕЛЬГЕ ДЕЙІН</span><span class="creator">ЖОБАНЫ ҚҰРАСТЫРУШЫ<br><strong>Жаңабай Нұржанат</strong> · <a href="mailto:nur97nur@bk.ru">nur97nur@bk.ru</a></span><span>© 2026</span></footer>
+  <dialog id="modelDialog" class="model-dialog"><button class="dialog-close" aria-label="Жабу">×</button><div id="dialogContent"></div></dialog>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.19.0/dist/katex.min.js" integrity="sha384-QFFtAGzvvj+bfgCGxXJlNZZR1nXEZgvG8tDLCCY1F19xl20WlfTYgguB4VcNdxYk" crossorigin="anonymous"></script>
+  <script defer src="app.js"></script>
+</body>
+</html>
